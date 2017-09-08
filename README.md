@@ -1,18 +1,10 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+[![Build Status](https://travis-ci.org/Code-Institute-Solutions/custom_authentication.svg?branch=master)](https://travis-ci.org/Code-Institute-Solutions/custom_authentication)
 
+## Stream 3 Project 2a: **custom_authentication**
 
-Hi there! Welcome to Cloud9 IDE!
+# Summary
+custom_authentication is a basic Django app to demonstrate how to authenticate user accounts on a simple 'hello-world' web application
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
-
-Happy coding!
-The Cloud9 IDE team
+# Testing
+Using Travis for continuous integration
