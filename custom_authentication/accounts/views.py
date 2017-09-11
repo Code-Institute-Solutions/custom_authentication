@@ -47,7 +47,7 @@ def login(request):
 def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    return redirect(reverse('get_index'))
 
 
 def register(request):

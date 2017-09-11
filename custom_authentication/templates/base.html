@@ -26,13 +26,14 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <li><a href="#">Profile</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'profile' %}"> Profile</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Log Out</a></li>
-                        <li><a href="#">Log In</a></li>
-                        <li><a href="#">Register</a></li>
-                </ul>
-                </li>
+                        <li><a href="{% url 'logout' %}"> Log Out</a></li>
+                    {%  else %}
+                        <li><a href="{% url 'register' %}"> Register</a></li>
+                        <li><a href="{% url 'login' %}?next={% url 'profile' %}"> Log In</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -47,5 +48,3 @@
         </div>
     </footer>
 </body>
-
-</html>
