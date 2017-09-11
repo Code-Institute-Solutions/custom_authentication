@@ -69,6 +69,6 @@ def register(request):
     else:
         user_form = UserRegistrationForm()
 
-    args = {'user_form' : user_form}
+    args = {'user_form': user_form}
     args.update(csrf(request))
     return render(request, 'register.html', args)

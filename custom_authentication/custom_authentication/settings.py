@@ -103,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
+    # backends_challenge replaces backends and can be removed altogether
     'accounts.backends.EmailAuth',
     'accounts.backends_challenge.CaseInsensitiveAuth'
 ]
