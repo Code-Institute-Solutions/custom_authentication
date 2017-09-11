@@ -14,9 +14,6 @@ class UserProfileInline(admin.StackedInline):
 
 # Define a new User admin
 class UserAdmin(BaseUserAdmin):
-    # question(NMC): if we leave the comma out of line 19 we get the following error:
-    # <class 'accounts.admin.UserAdmin'>: (admin.E103) The value of 'inlines' must be a list or tuple
-    # why does this need to be a list or tuple?
     inlines = (UserProfileInline, )
 
 

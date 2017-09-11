@@ -4,8 +4,7 @@
     <form role="form" method="post" action="{% url 'register' %}" class="accountform">
         <legend>Create a new account</legend>
         {% csrf_token %}
-        {{ form | as_bootstrap }}
-        {{ profile_form | as_bootstrap }}
+        {{  user_form | as_bootstrap }}
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Create account</button>
         </div>
