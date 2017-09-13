@@ -12,7 +12,7 @@ def get_index(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url='/login?next=profile')
+@login_required
 def profile(request):
     return render(request, 'profile.html')
 

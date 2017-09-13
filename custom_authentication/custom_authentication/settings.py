@@ -52,6 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'custom_authentication.urls'
+LOGIN_URL = '/accounts/login?next=profile'
 
 TEMPLATES = [
     {

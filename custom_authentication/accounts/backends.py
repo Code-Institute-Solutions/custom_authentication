@@ -7,7 +7,9 @@ class EmailAuth(object):
        Get an instance of User using the supplied email and check its password
        """
         try:
+            # Get a User instance using the supplied email or username
             user = User.objects.get(email=username)
+            # Check if the password submitted matches that of this User
             if user.check_password(password):
                 return user
 
@@ -22,6 +24,6 @@ class EmailAuth(object):
             user = User.objects.get(pk=user_id)
             if user.is_active:
                 return user
-            return None
+            
         except User.DoesNotExist:
             return None
