@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from .models import UserProfile
 
 
-# Define an inline admin descriptor for Employee model
+# Define an inline admin descriptor for the UserProfile model
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
     can_delete = False
