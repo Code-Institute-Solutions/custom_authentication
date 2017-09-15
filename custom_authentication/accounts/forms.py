@@ -24,7 +24,7 @@ class UserRegistrationForm(UserCreationForm):
     def clean_email(self):
         email = self.cleaned_data.get('email')
         username = self.cleaned_data.get('username')
-        if email and User.objects.filter(email=email).exclude(username=username).count():
+        if User.objects.filter(email=email).exclude(username=username):
             raise forms.ValidationError(u'Email addresses must be unique.')
         return email
 
@@ -32,16 +32,10 @@ class UserRegistrationForm(UserCreationForm):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
 
-        if password1 and password2 and password1 != password2:
-            message = "Passwords do not match"
-            raise ValidationError(message)
+        if not password1 or not password2:
+            raise ValidationError("Password must not be empty")
+
+        if password1 != password2:
+            raise ValidationError("Passwords do not match")
 
         return password2
-
-    def save(self, commit=True):
-        instance = super(UserRegistrationForm, self).save(commit=False)
-
-        if commit:
-            instance.save()
-
-        return instance
