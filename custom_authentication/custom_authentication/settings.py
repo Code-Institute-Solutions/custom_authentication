@@ -104,10 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    # accounts.backends required in lesson code
-    'accounts.backends.EmailAuth',
-    # accounts.backends_challenge required in challenge code, replaces accounts.backends
-    'accounts.backends_challenge.CaseInsensitiveAuth'
+
+    # Choose just one of the following backends - the first for the lesson code or the second for the challenge code
+    # 'accounts.backends.EmailAuth',
+    'accounts.backends_challenge.CaseInsensitiveAuth',
 ]
 
 
@@ -132,4 +132,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-
